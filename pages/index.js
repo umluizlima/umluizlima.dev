@@ -14,13 +14,15 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I’m <strong>Luiz Lima</strong>. I’m a software engineer.
-          You can contact me on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
+          Olá! Me chamo <strong>Luiz</strong> e sou um Engenheiro de Software brasileiro.
         </p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          Esta página ainda está em construção. Por enquanto, você pode me conhecer melhor através de redes sociais,
+          como <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/umluizlima">LinkedIn</a>,{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/umluizlima">GitHub</a>{' '}
+          e <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
         </p>
+        <p>Obrigado pela visita!</p>
       </section>
       {allPostsData.length > 0 &&
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
