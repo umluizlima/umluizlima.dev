@@ -3,7 +3,7 @@ title: 'Como descobrir códigos de cores usando Python?'
 date: '2020-08-16'
 ---
 
-Neste artigo você vai conhecer a solução que acabei desenvolendo para um problema corriqueiro ao lidar com cores no computador.
+Neste artigo você vai conhecer a solução que acabei desenvolvendo para um problema corriqueiro ao lidar com cores no computador.
 
 ## O problema
 
@@ -23,7 +23,7 @@ Um dos recursos que mais gostei de consumir nos estudos iniciais da linguagem de
 
 **\*** a versão original em inglês é totalmente gratuita pelo <a target="_blank" href="https://automatetheboringstuff.com/">site</a>. Já a tradução para Português está disponível para <a target="_blank" href="https://amzn.to/3h2DO4H">venda</a>.
 
-Por uma feliz coincidência, passei pelo problema que te convidei a imaginar alí em cima na mesma época em que estudava este livro. Havia encontrado meu próprio problema real para colocar as habilidades em prática!
+Por uma feliz coincidência, passei pelo problema que te convidei a imaginar ali em cima na mesma época em que estudava este livro. Havia encontrado meu próprio problema real para colocar as habilidades em prática!
 
 ### Objetivo
 
