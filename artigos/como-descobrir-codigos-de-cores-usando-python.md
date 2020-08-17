@@ -21,7 +21,7 @@ Talvez você já tenha passado por esta situação na vida real. Talvez, assim c
 
 Um dos recursos que mais gostei de consumir nos estudos iniciais da linguagem de programação Python foi o livro <a target="_blank" href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a>**\***. O que mais me encanta na sua didática é que mesmo os conceitos mais básicos da programação são introduzidos em pequenos projetos que resolvem algum problema real.
 
-**\*** a versão original em inglês é totalmente gratuita pelo <a target="_blank" href="https://automatetheboringstuff.com/">site</a>. Já a tradução para Português pode ser adquirida <a target="_blank" href="https://amzn.to/3h2DO4H">aqui</a>.
+**\*** a versão original em inglês é totalmente gratuita pelo <a target="_blank" href="https://automatetheboringstuff.com/">site</a>. Já a tradução para Português está disponível para <a target="_blank" href="https://amzn.to/3h2DO4H">venda</a>.
 
 Por uma feliz coincidência, passei pelo problema que te convidei a imaginar alí em cima na mesma época em que estudava este livro. Havia encontrado meu próprio problema real para colocar as habilidades em prática!
 
