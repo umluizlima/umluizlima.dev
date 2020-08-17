@@ -4,6 +4,7 @@ import Date from '../../components/date'
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
+import { highlight } from 'highlight.js'
 
 export default function Post({ postData }) {
   return (
@@ -18,6 +19,11 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <hr />
+      <div>
+        <strong>Observações:</strong> este conteúdo pode incluir links para programas de
+        afiliados a partir dos quais posso receber uma pequena comissão caso você realize uma compra.
+      </div>
     </Layout>
   )
 }
