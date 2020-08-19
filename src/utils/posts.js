@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 
-const postsDirectory = path.join(process.cwd(), 'artigos')
+const postsDirectory = path.join(process.cwd(), 'content', 'blog')
 
 const getFileNames = (path) => {
   if (!fs.existsSync(path)) {
