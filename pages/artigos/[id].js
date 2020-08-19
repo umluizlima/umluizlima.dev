@@ -23,7 +23,6 @@ export default function Post({ postData }) {
           source={postData.content}
           renderers={{ code: CodeBlock }}
         />
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <hr />
       <div>
