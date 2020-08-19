@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
                   <Date dateString={date} />
                 </small>
                 <br />
-                <Link href="/artigos/[id]" as={`/artigos/${id}`}>
+                <Link href="/blog/[id]" as={`/blog/${id}`}>
                   <a>{title}</a>
                 </Link>
                 {description && (
