@@ -1,14 +1,15 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import ReactMarkdown from 'react-markdown/with-html'
+// import ReactMarkdown from 'react-markdown/with-html'
 
-// import CodeBlock from '../../components/codeBlock'
+import CodeBlock from '../../components/codeBlock'
 import Date from '../../components/date'
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
 
-const CodeBlock = dynamic(() => import('../../components/codeBlock'))
+// const CodeBlock = dynamic(() => import('../../components/codeBlock'))
+const ReactMarkdown = dynamic(() => import('react-markdown/with-html'))
 
 export default function Post({ postData }) {
   return (
@@ -26,7 +27,7 @@ export default function Post({ postData }) {
           source={postData.content}
           renderers={{ code: CodeBlock }}
         />
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
       </article>
       <hr />
       <div>
