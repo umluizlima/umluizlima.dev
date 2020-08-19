@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown/with-html'
 import CodeBlock from '../../components/codeBlock'
 import Date from '../../components/date'
 import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../utils/posts'
 import utilStyles from '../../styles/utils.module.css'
 
 export default function Post({ postData }) {
