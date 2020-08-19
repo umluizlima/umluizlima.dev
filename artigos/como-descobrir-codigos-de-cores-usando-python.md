@@ -41,13 +41,13 @@ Vamos precisar de duas bibliotecas para nossa solução:
 
 Podemos instalá-las com o seguinte comando:
 
-```python
+```bash
 pip install pyautogui pyperclip
 ```
 
 A partir de agora podemos acessar o interpretador do Python:
 
-```python
+```bash
 python
 ```
 
@@ -142,13 +142,13 @@ E você pode conferir o resultado colando o valor em um editor de texto ou no pr
 
 Na intenção de não repetir infinitamente a definição deste código e nem mantê-lo limitado a minha própria máquina, empacotei-o sob a biblioteca <a target="_blank" href="https://pypi.org/project/eyedropper/">eyedropper</a> que está disponível para instalação:
 
-```python
+```bash
 pip install eyedropper
 ```
 
 E que pode ser utilizado através do seguinte comando diretamente no terminal:
 
-```python
+```bash
 eyedropper
 ```
 
