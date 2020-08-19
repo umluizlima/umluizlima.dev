@@ -1,11 +1,14 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown/with-html'
 
-import CodeBlock from '../../components/codeBlock'
+// import CodeBlock from '../../components/codeBlock'
 import Date from '../../components/date'
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
+
+const CodeBlock = dynamic(() => import('../../components/codeBlock'))
 
 export default function Post({ postData }) {
   return (
