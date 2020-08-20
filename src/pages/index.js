@@ -17,16 +17,26 @@ export default function Home({ allPostsData }) {
           Olá! Me chamo <strong>Luiz</strong> e sou um Engenheiro de Software brasileiro.
         </p>
         <p>
-          Esta página ainda está em construção. Por enquanto, você pode me conhecer melhor através de redes sociais,
-          como <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/umluizlima">LinkedIn</a>,{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/umluizlima">GitHub</a>{' '}
-          e <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
+          Neste site você pode acompanhar minhas <strong>publicações</strong>.
         </p>
-        <p>Obrigado pela visita!</p>
+        <p>
+          Para conhecer mais detalhes de minha <strong>carreira</strong>, recomendo que nos conectemos através do{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/umluizlima">LinkedIn</a>.
+        </p>
+        <p>
+          Se quiser explorar meus <strong>projetos</strong>, me siga no{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/umluizlima">GitHub</a>.
+        </p>
+        <p>
+          Também estou disponível para contato em outras redes sociais, como{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/umluizlima">Facebook</a>{' '} ou
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
+
+        </p>
       </section>
       {allPostsData.length > 0 &&
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Artigos</h2>
+          <h2 className={utilStyles.headingLg}>Publicações</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title, description }) => (
               <li className={utilStyles.listItem} key={id}>
