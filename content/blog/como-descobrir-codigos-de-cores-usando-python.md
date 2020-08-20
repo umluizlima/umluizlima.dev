@@ -20,9 +20,9 @@ Talvez você já tenha passado por esta situação na vida real. Talvez, assim c
 
 ## A solução
 
-Um dos recursos que mais gostei de consumir nos estudos iniciais da linguagem de programação Python foi o livro <a target="_blank" href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a>**\***. O que mais me encanta na sua didática é que mesmo os conceitos mais básicos da programação são introduzidos em pequenos projetos que resolvem algum problema real.
+Um dos recursos que mais gostei de consumir nos estudos iniciais da linguagem de programação Python foi o livro <a target="_blank" rel="noopener" href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a>**\***. O que mais me encanta na sua didática é que mesmo os conceitos mais básicos da programação são introduzidos em pequenos projetos que resolvem algum problema real.
 
-**\*** a versão original em inglês é totalmente gratuita pelo <a target="_blank" href="https://automatetheboringstuff.com/">site</a>. Já a tradução para Português está disponível para <a target="_blank" href="https://amzn.to/3h2DO4H">venda</a>.
+**\*** a versão original em inglês é totalmente gratuita pelo <a target="_blank" rel="noopener" href="https://automatetheboringstuff.com/">site</a>. Já a tradução para Português está disponível para <a target="_blank" rel="noopener" href="https://amzn.to/3h2DO4H">venda</a>.
 
 Por uma feliz coincidência, passei pelo problema que te convidei a imaginar ali em cima na mesma época em que estudava este livro. Havia encontrado meu próprio problema real para colocar as habilidades em prática!
 
@@ -32,13 +32,13 @@ Escrever um programa que, ao ser executado, armazene na área de transferência 
 
 ### Requisitos
 
-- <a target="_blank" href="https://www.python.org/downloads/">Python 3.6+</a>
+- <a target="_blank" rel="noopener" href="https://www.python.org/downloads/">Python 3.6+</a>
 
 ### Preparação
 
 Vamos precisar de duas bibliotecas para nossa solução:
-- <a target="_blank" href="https://pyautogui.readthedocs.io/en/latest/index.html">pyautogui</a> para tirar um screenshot da tela no momento da execução do código e também descobrir qual é a posição do ponteiro do mouse;
-- <a target="_blank" href="https://pyperclip.readthedocs.io/en/latest/">pyperclip</a> para colocar o código de cor na área de transferência do computador;
+- <a target="_blank" rel="noopener" href="https://pyautogui.readthedocs.io/en/latest/index.html">pyautogui</a> para tirar um screenshot da tela no momento da execução do código e também descobrir qual é a posição do ponteiro do mouse;
+- <a target="_blank" rel="noopener" href="https://pyperclip.readthedocs.io/en/latest/">pyperclip</a> para colocar o código de cor na área de transferência do computador;
 
 Podemos instalá-las com o seguinte comando:
 
@@ -135,13 +135,13 @@ Com os recursos definidos, podemos implementar uma função simples para realiza
 Agora, sempre que rodar o comando **get_color_code()** nesta sessão do interpretador Python, sua função vai realizar os seguintes passos:
 1. Capturar um screenshot da tela e armazenar na variável **img**;
 2. Armazenar na variável **color** o valor do pixel sobre o qual o ponteiro do mouse se encontra;
-3. Copiar para a área de transferência do computador uma string <a target="_blank" href="https://stackoverflow.com/a/19996754/9234095">formatada</a> para corresponder ao código de cor hexadecimal daquele pixel;
+3. Copiar para a área de transferência do computador uma string <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/19996754/9234095">formatada</a> para corresponder ao código de cor hexadecimal daquele pixel;
 
 E você pode conferir o resultado colando o valor em um editor de texto ou no próprio terminal!
 
 ---
 
-Na intenção de não repetir infinitamente a definição deste código e nem mantê-lo limitado a minha própria máquina, empacotei-o sob a biblioteca <a target="_blank" href="https://pypi.org/project/eyedropper/">eyedropper</a> que está disponível para instalação:
+Na intenção de não repetir infinitamente a definição deste código e nem mantê-lo limitado a minha própria máquina, empacotei-o sob a biblioteca <a target="_blank" rel="noopener" href="https://pypi.org/project/eyedropper/">eyedropper</a> que está disponível para instalação:
 
 ```bash
 pip install eyedropper
@@ -157,6 +157,6 @@ eyedropper
 
 Este é um projeto simples que marcou muito meus estudos de Python. Enxergar a existência de pequenos problemas espalhados por aí que podem ser resolvidos através da programação foi essencial para despertar de vez meu interesse por esta habilidade e me impulsionou a continuar estudando para enfrentar problemas cada vez maiores.
 
-Se você está começando agora, sugiro que trilhe um caminho parecido: procure resolver problemas que desafiem suas habilidades atuais na medida certa para se manter em estado de <a target="_blank" href="https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness?language=pt-br#t-588436">fluxo</a> e continuar aprendendo. Um desafio muito superior a sua competência pode despertar a ansiedade, enquanto um muito inferior pode causar tédio.
+Se você está começando agora, sugiro que trilhe um caminho parecido: procure resolver problemas que desafiem suas habilidades atuais na medida certa para se manter em estado de <a target="_blank" rel="noopener" href="https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness?language=pt-br#t-588436">fluxo</a> e continuar aprendendo. Um desafio muito superior a sua competência pode despertar a ansiedade, enquanto um muito inferior pode causar tédio.
 
 Se você gostou deste artigo, **compartilhe** com alguém que também possa se interessar.
