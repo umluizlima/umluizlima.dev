@@ -29,9 +29,8 @@ export default function Home({ allPostsData }) {
         </p>
         <p>
           Também estou disponível para contato em outras redes sociais, como{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/umluizlima">Facebook</a>{' '} ou
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
-
+          <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/umluizlima">Facebook</a>{' '}
+          ou <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/umluizlima">Twitter</a>.
         </p>
       </section>
       {allPostsData.length > 0 &&
