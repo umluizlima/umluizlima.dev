@@ -4,7 +4,9 @@ description: 'Desenvolva um jogo para praticar a tabuada usando Python.'
 date: '2020-08-19'
 ---
 
-Se tem algo que aprendemos na escola e usamos pro resto da vida, são as operações aritméticas. Todo dia tem um troquinho pra subtrair, uma receita pra multiplicar os ingredientes, uma conta pra dividir com a galera ou uma economia pra somar na reserva financeira. São nessas situações que estar com a habilidade afiada ajuda muito.
+Se tem algo que aprendemos na escola e usamos pro resto da vida, são as operações aritméticas.
+
+Todos os dias temos um troco para subtrair, uma receita para multiplicar os ingredientes, uma conta para dividir com as amizades ou uma economia para somar na reserva financeira. São nessas situações que estar com a habilidade afiada ajuda muito.
 
 Uma maneira de manter essas continhas sempre na ponta da língua é praticando a tabuada. Que tal desenvolvermos um jogo pra ajudar nisso?
 
@@ -12,15 +14,15 @@ Primeiro vamos deixar as regras bem definidas para facilitar o trabalho de desen
 
 O jogo irá funcionar na linha de comando, e deverá seguir a seguinte rotina:
 
-1. É apresentada uma equação no formato: **A operador B**
-2. Digitamos a resposta e teclamos ENTER
-3. Se estiver correta: aparece uma nova equação (passo 1)
-4. Senão: o jogo acaba e é mostrado o número de acertos na partida
+1. É apresentada uma equação no formato **A operador B**;
+2. Digitamos a resposta e teclamos ENTER;
+3. Se estiver correta, uma nova equação aparece (volta para o passo 1);
+4. Senão, o jogo termina e o número de acertos da partida é mostrado;
 
-É legal definir limites para o escopo não ficar muito amplo:
+É importante definirmos também alguns limites para que o escopo não fique muito amplo:
 
-- Os operandos serão números inteiros entre 1 e 9
-- O operador será exclusivamente o da multiplicação
+- Os operandos serão números inteiros entre 1 e 9;
+- O operador será exclusivamente o da multiplicação;
 
 Exemplo:
 
@@ -32,29 +34,36 @@ Resposta: 21
 Acertos: 1
 ```
 
-Beleza, primeiro vamos estruturar a lógica do jogo usando valores fixos pros operandos. Em um arquivo tabuada.py digite o seguinte código:
+Primeiro, vamos estruturar a lógica do jogo usando valores fixos para os operandos. Em um arquivo **tabuada.py** declaramos uma função chamada **tabuada()** que executa os seguintes passos sempre que for chamada:
+
+1. Define os operandos da equação. Até agora são os valores fixos 2 e 3;
+2. Imprime a equação na tela interpolando os valores de a e b para formar a string **"2 x 3"**;
+3. Retorna o resultado (True ou False) da comparação de igualdade entre a resposta digitada **int(input("Resposta: "))** e o resultado da equação;
 
 ```python
 def tabuada():
-    equacao = f'2 * 3'
-    print(equacao.replace('*', 'x'))
-    return int(input('Resposta: ')) == eval(equacao)
+    a, b = 2, 3
+    print(f"{a} x {b}")
+    return int(input("Resposta: ")) == a * b
+```
 
+Também definimos o ciclo de vida do jogo, que:
+
+1. Inicializa a variável **acertos** com o valor 0;
+2. Estabelece um loop de execução que deverá ser repetido enquanto o retorno da função tabuada for verdadeiro, incrementando o número de acertos a cada iteração completa;
+3. Quando o ciclo for quebrado, imprime o número de acertos na tela;
+
+```python
 acertos = 0
 while(tabuada()):
     acertos += 1
-print(f'Acertos: {acertos}')
+print(f"Acertos: {acertos}")
 ```
 
-A estrutura é simples:
-
-1. Declaramos uma função chamada tabuada() na qual a equação é definida em uma string simples equacao = f'2 * 3'
-2. A equação é impressa na tela, substituindo o caractere ‘*’ por ‘x’ print(equacao.replace('*', 'x'))
-3. A função então retorna o resultado (True ou False) da comparação de igualdade entre a resposta digitada int(input('Resposta: ')) e o resultado da equação (utilizamos a função eval(equacao) para calcular o resultado)
-4. A função então é chamada enquanto a resposta dada estiver correta while(tabuada()): e incrementa a variável acertos += 1
-5. Quando a resposta for errada, a função retorna False , saindo do loop e imprimindo o número de acertos print(f'Acertos: {acertos}')
+A partir daqui já podemos testar o jogo ao executar o seguinte comando no terminal (é preciso estar na mesma pasta que o arquivo do jogo):
 
 ```python
+python tabuada.py
 2 x 3
 Resposta: 6
 2 x 3
@@ -64,37 +73,37 @@ Resposta: 5
 Acertos: 2
 ```
 
-Testando vemos que tá funcionando! Só não tem muita graça…
+Está funcionando! Só não tem muita graça ainda …
 
-O próximo passo é gerar os operandos aleatoriamente. Mas como podemos fazer isso? O módulo random já vem disponível com a instalação do Python e tem um método que gera números inteiros aleatórios, por isso vamos utilizá-lo:
+O próximo passo é gerar os operandos aleatoriamente. Mas como podemos fazer isso?
 
-1. Importamos o método randint do módulo random: from random import randint no topo do arquivo tabuada.py
-2. Dentro da função, alteramos a declaração da equação para gerar os operandos de maneira aleatória: equacao = f'{randint(1,9)} * {randint(1,9)}'
+O módulo **random** já vem disponível com a instalação do Python e tem um método que gera números inteiros aleatórios, por isso vamos utilizá-lo.
 
+Importamos o método **randint** do módulo **random** no topo do arquivo:
+```python
+from random import randint
+```
+
+Dentro da função **tabuada()** alteramos a declaração dos operandos para que sejam gerados aleatoriamente:
+```python
+a, b = randint(1,9), randint(1,9)
+```
+
+Agora sim o jogo está completo e podemos manter a aritmética em dia!
+
+Neste pequeno projeto pudemos praticar alguns conceitos básicos que são comuns a diversas linguagens de programação, como ler uma entrada de dados, imprimir informações na tela, importar dependências e interpolar variáveis em strings.
+
+Aqui temos o resultado final do arquivo **tabuada.py**:
 ```python
 from random import randint
 
 def tabuada():
-    equacao = f'{randint(1,9)} * {randint(1,9)}'
-    print(equacao.replace('*', 'x'))
-    return int(input('Resposta: ')) == eval(equacao)
+    a, b = randint(1,9), randint(1,9)
+    print(f"{a} x {b}")
+    return int(input("Resposta: ")) == a * b
 
 acertos = 0
 while(tabuada()):
     acertos += 1
-print(f'Acertos: {acertos}')
-```
-
-Resultado
-
-```python
-7 x 4
-Resposta: 28
-8 x 5
-Resposta: 40
-5 x 5
-Resposta: 25
-5 x 3
-Resposta: 14
-Acertos: 3
+print(f"Acertos: {acertos}")
 ```
