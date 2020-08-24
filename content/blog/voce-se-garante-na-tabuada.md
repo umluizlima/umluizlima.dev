@@ -4,15 +4,11 @@ description: 'Desenvolva um jogo para praticar a tabuada usando Python.'
 date: '2020-08-19'
 ---
 
-Se tem algo que aprendemos na escola e usamos pro resto da vida, são as operações aritméticas.
-
-Todos os dias temos um troco para subtrair, uma receita para multiplicar os ingredientes, uma conta para dividir com as amizades ou uma economia para somar na reserva financeira. São nessas situações que estar com a habilidade afiada ajuda muito.
+Se tem algo que aprendemos na escola e usamos pelo resto da vida, são as operações aritméticas. Todos os dias temos um troco para subtrair, uma receita para multiplicar os ingredientes, uma conta para dividir com outras pessoas ou uma economia para somar na reserva financeira. São nessas situações que estar com a habilidade afiada ajuda muito.
 
 Uma maneira de manter essas continhas sempre na ponta da língua é praticando a tabuada. Que tal desenvolvermos um jogo pra ajudar nisso?
 
-Primeiro vamos deixar as regras bem definidas para facilitar o trabalho de desenvolvimento.
-
-O jogo irá funcionar na linha de comando, e deverá seguir a seguinte rotina:
+Vamos deixar as regras bem definidas para facilitar o trabalho de desenvolvimento. O jogo irá funcionar na linha de comando, e deverá seguir a seguinte rotina:
 
 1. É apresentada uma equação no formato **A operador B**;
 2. Digitamos a resposta e teclamos ENTER;
@@ -24,7 +20,7 @@ O jogo irá funcionar na linha de comando, e deverá seguir a seguinte rotina:
 - Os operandos serão números inteiros entre 1 e 9;
 - O operador será exclusivamente o da multiplicação;
 
-Exemplo:
+Assim, podemos ilustrar que uma partida deverá funcionar da seguinte forma:
 
 ```python
 7 x 4
@@ -34,11 +30,13 @@ Resposta: 21
 Acertos: 1
 ```
 
+---
+
 Primeiro, vamos estruturar a lógica do jogo usando valores fixos para os operandos. Em um arquivo **tabuada.py** declaramos uma função chamada **tabuada()** que executa os seguintes passos sempre que for chamada:
 
-1. Define os operandos da equação. Até agora são os valores fixos 2 e 3;
-2. Imprime a equação na tela interpolando os valores de a e b para formar a string **"2 x 3"**;
-3. Retorna o resultado (True ou False) da comparação de igualdade entre a resposta digitada **int(input("Resposta: "))** e o resultado da equação;
+1. Define os operandos da equação, **a** e **b** (vamos usar valores fixos por enquanto);
+2. Imprime a equação na tela, formatando os operandos em uma string;
+3. Retorna o resultado da comparação de igualdade (True ou False) entre a resposta digitada e o resultado da equação;
 
 ```python
 def tabuada():
@@ -60,7 +58,7 @@ while(tabuada()):
 print(f"Acertos: {acertos}")
 ```
 
-A partir daqui já podemos testar o jogo ao executar o seguinte comando no terminal (é preciso estar na mesma pasta que o arquivo do jogo):
+A partir daqui já podemos testar o jogo ao executar o seguinte comando no terminal*****:
 
 ```python
 python tabuada.py
@@ -73,27 +71,43 @@ Resposta: 5
 Acertos: 2
 ```
 
-Está funcionando! Só não tem muita graça ainda …
+***** É preciso estar na mesma pasta que o arquivo do jogo.
 
-O próximo passo é gerar os operandos aleatoriamente. Mas como podemos fazer isso?
+Nosso próximo passo é gerar os operandos aleatoriamente. Mas como podemos fazer isso?
 
-O módulo **random** já vem disponível com a instalação do Python e tem um método que gera números inteiros aleatórios, por isso vamos utilizá-lo.
+O módulo **random** já vem disponível com a instalação do Python e tem um método que gera números inteiros aleatórios. Podemos importar seu método **randint** no topo do arquivo:
 
-Importamos o método **randint** do módulo **random** no topo do arquivo:
 ```python
 from random import randint
 ```
 
 Dentro da função **tabuada()** alteramos a declaração dos operandos para que sejam gerados aleatoriamente:
+
 ```python
 a, b = randint(1,9), randint(1,9)
 ```
 
-Agora sim o jogo está completo e podemos manter a aritmética em dia!
+Agora sim o jogo está completo e vamos manter a aritmética em dia! Podemos testá-lo mais uma vez no terminal:
 
-Neste pequeno projeto pudemos praticar alguns conceitos básicos que são comuns a diversas linguagens de programação, como ler uma entrada de dados, imprimir informações na tela, importar dependências e interpolar variáveis em strings.
+```python
+python tabuada.py
+7 x 8
+Resposta: 56
+6 x 6
+Resposta: 36
+1 x 4
+Resposta: 4
+2 x 9
+Resposta: 17
+Acertos: 3
+```
+
+---
+
+Neste pequeno projeto pudemos praticar alguns conceitos básicos que são comuns a diversas linguagens de programação, como ler uma entrada de dados, imprimir informações na tela, importar dependências e formatar strings usando variáveis. Aqui cabe um lembrete: nem todo projeto precisa ser revolucionário ou ter planos de longo prazo, mas pode simplesmente servir para fixar conhecimentos específicos. É importante aceitarmos isto para que o aprendizado possa acontecer de forma leve e prazerosa.
 
 Aqui temos o resultado final do arquivo **tabuada.py**:
+
 ```python
 from random import randint
 
