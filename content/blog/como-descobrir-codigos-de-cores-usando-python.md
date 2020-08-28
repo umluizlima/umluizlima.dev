@@ -2,6 +2,7 @@
 title: 'Como descobrir códigos de cores usando Python?'
 description: 'Aprenda a encontrar a cor de qualquer pixel na sua tela.'
 date: '2020-08-16'
+disclaimer: true
 ---
 
 Neste artigo você vai conhecer a solução que acabei desenvolvendo para um problema corriqueiro ao lidar com cores no computador.

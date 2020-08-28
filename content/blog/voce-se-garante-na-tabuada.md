@@ -2,6 +2,7 @@
 title: 'Você se garante na tabuada?'
 description: 'Desenvolva um jogo para praticar a tabuada usando Python.'
 date: '2020-08-19'
+disclaimer: false
 ---
 
 Se tem algo que aprendemos na escola e usamos pelo resto da vida, são as operações aritméticas. Todos os dias temos um troco para subtrair, uma receita para multiplicar os ingredientes, uma conta para dividir com outras pessoas ou uma economia para somar na reserva financeira. São nessas situações que estar com a habilidade afiada ajuda muito.
