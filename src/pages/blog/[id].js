@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown/with-html'
 
 import CodeBlock from '../../components/codeBlock'
 import Date from '../../components/date'
+import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../utils/posts'
 import utilStyles from '../../styles/utils.module.css'
@@ -23,12 +24,9 @@ export default function Post({ postData }) {
           source={postData.content}
           renderers={{ code: CodeBlock }}
         />
+        <hr />
+        {postData.disclaimer && <Disclaimer />}
       </article>
-      <hr />
-      <div>
-        <strong>Observações:</strong> este conteúdo pode incluir links para programas de
-        afiliados a partir dos quais posso receber uma pequena comissão caso você realize uma compra.
-      </div>
     </Layout>
   )
 }
