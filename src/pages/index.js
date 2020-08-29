@@ -1,11 +1,9 @@
-import Link from 'next/link'
-
-import Date from '../components/date'
+import Articles from '../components/articles'
 import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedContentData, getBlogDirectory } from '../utils/content'
 
-const Home = ({ allPostsData }) => (
+const Home = ({ articles }) => (
   <Layout home>
     <section className={utilStyles.headingMd}>
       <p>
@@ -28,35 +26,13 @@ const Home = ({ allPostsData }) => (
         ou <a target="_blank" rel="noopener" href="https://twitter.com/umluizlima">Twitter</a>.
       </p>
     </section>
-    {allPostsData.length > 0 &&
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Publicações</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, description }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-              <br />
-              <Link href="/blog/[id]" as={`/blog/${id}`}>
-                <a>{title}</a>
-              </Link>
-              {description && (
-                <div>
-                  <small className={utilStyles.lightText}>{description}</small>
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
-    }
+    <Articles articles={articles} styles={utilStyles} />
   </Layout>
 )
 
 export const getStaticProps = async () => ({
   props: {
-    allPostsData: getSortedContentData(getBlogDirectory())
+    articles: getSortedContentData(getBlogDirectory())
   },
 })
 
