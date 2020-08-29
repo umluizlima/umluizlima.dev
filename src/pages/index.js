@@ -54,7 +54,7 @@ const Home = ({ allPostsData }) => (
   </Layout>
 )
 
-export const getStaticProps = async () ({
+export const getStaticProps = async () => ({
   props: {
     allPostsData: getSortedContentData(getBlogDirectory())
   },
