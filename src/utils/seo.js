@@ -1,7 +1,7 @@
 export default {
   title: 'Início',
   titleTemplate: '%s | umluizlima',
-  description: 'Site pessoal de umluizlima',
+  description: 'Veja as publicações de Luiz Lima e se conecte através das redes sociais.',
   canonical: 'https://umluizlima.dev',
   openGraph: {
     type: 'website',
