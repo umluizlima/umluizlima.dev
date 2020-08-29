@@ -1,3 +1,4 @@
+import '../styles/code.css'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {

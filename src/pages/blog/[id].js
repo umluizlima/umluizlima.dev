@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import ReactMarkdown from 'react-markdown/with-html'
 
-import CodeBlock from '../../components/codeBlock'
 import Date from '../../components/date'
 import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
@@ -19,11 +17,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown
-          escapeHtml={false}
-          source={postData.content}
-          renderers={{ code: CodeBlock }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
         <hr />
         {postData.disclaimer && <Disclaimer />}
       </article>
