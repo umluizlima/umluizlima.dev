@@ -1,17 +1,22 @@
-import Head from 'next/head'
+import { withRouter } from 'next/router'
+import { DefaultSeo } from 'next-seo'
 
 import Date from '../../components/date'
 import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../utils/posts'
+import SEO from '../../utils/seo'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function Post({ postData }) {
+function Post({ postData, router }) {
   return (
     <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
+      <DefaultSeo
+        title={postData.title}
+        description={postData.description}
+        openGraph={{}}
+        canonical={`${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`}
+      />
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
@@ -37,7 +42,9 @@ export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id)
   return {
     props: {
-      postData
+      postData,
     }
   }
 }
+
+export default withRouter(Post)
