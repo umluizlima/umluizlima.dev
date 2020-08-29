@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: 'Início',
   titleTemplate: '%s | umluizlima',
   description: 'Veja as publicações de Luiz Lima e se conecte através das redes sociais.',
