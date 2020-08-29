@@ -1,7 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import remark from 'remark'
+import { highlight, getLanguage } from 'highlight.js'
+import marked from 'marked'
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog')
 
@@ -71,18 +72,18 @@ export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
 
-  // Use remark to convert markdown into string
-  const processedContent = await remark()
-    .process(matterResult.content)
-  const content = processedContent.toString()
+  marked.setOptions({
+    highlight: (code, language) => {
+      const validLanguage = getLanguage(language) ? language : 'plaintext'
+      return highlight(validLanguage, code).value
+    }
+  })
 
-  // Combine the data with the id and contentHtml
   return {
     id,
-    content,
+    content: marked(matterResult.content),
     ...matterResult.data
   }
 }
