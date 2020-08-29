@@ -62,7 +62,7 @@ O primeiro passo é importarmos as duas bibliotecas para acessar seus recursos:
 >>> import pyperclip
 ```
 
-Podemos então utilizar o comando **dir** para descobrir o que cada uma nos oferece:
+Podemos então utilizar o comando `dir` para descobrir o que cada uma nos oferece:
 
 ```python
 >>> dir(pyautogui)
@@ -71,14 +71,14 @@ Podemos então utilizar o comando **dir** para descobrir o que cada uma nos ofer
 [..., copy, ...]
 ```
 
-Algum dos itens listados chamou atenção? Podemos conhecer seus detalhes com o comando **help**:
+Algum dos itens listados chamou atenção? Podemos conhecer seus detalhes com o comando `help`:
 
 ```python
 >>> help(pyautogui.position)
 ...
 ```
 
-Vimos que a função **pyautogui.position** retorna uma tupla com as coordenadas **x** e **y** atuais do ponteiro do mouse. Você pode executá-la para testar:
+Vimos que a função `pyautogui.position` retorna uma tupla com as coordenadas `x` e `y` atuais do ponteiro do mouse. Você pode executá-la para testar:
 
 ```python
 >>> pyautogui.position()
@@ -92,7 +92,7 @@ Point(x=..., y=...)
 ...
 ```
 
-Já a **pyautogui.screenshot** retorna uma instância da classe **PIL.PngImagePlugin.PngImageFile**, como podemos validar:
+Já a `pyautogui.screenshot` retorna uma instância da classe `PIL.PngImagePlugin.PngImageFile`, como podemos validar:
 
 ```python
 >>> img = pyautogui.screenshot()
@@ -100,7 +100,7 @@ Já a **pyautogui.screenshot** retorna uma instância da classe **PIL.PngImagePl
 <PIL.PngImagePlugin.PngImageFile image mode=RGB size=...x... at ...>
 ```
 
-Ao investigar essa instância vemos que ela oferece um método chamado **getpixel** que, ao receber uma tupla de dois elementos representando a coordenada desejada, retorna o valor daquele pixel:
+Ao investigar essa instância vemos que ela oferece um método chamado `getpixel` que, ao receber uma tupla de dois elementos representando a coordenada desejada, retorna o valor daquele pixel:
 
 ```python
 >>> dir(img)
@@ -118,7 +118,7 @@ Ao investigar essa instância vemos que ela oferece um método chamado **getpixe
 ...
 ```
 
-A função **pyperclip.copy** permite copiar uma string qualquer para a área de transferência do computador, tornando-a disponível para ser colada.
+A função `pyperclip.copy` permite copiar uma string qualquer para a área de transferência do computador, tornando-a disponível para ser colada.
 
 ---
 
@@ -133,9 +133,9 @@ Com os recursos definidos, podemos implementar uma função simples para realiza
 ...    pyperclip.copy('#{0:02x}{1:02x}{2:02x}'.format(*color))
 ```
 
-Agora, sempre que rodar o comando **get_color_code()** nesta sessão do interpretador Python, sua função vai realizar os seguintes passos:
-1. Capturar um screenshot da tela e armazenar na variável **img**;
-2. Armazenar na variável **color** o valor do pixel sobre o qual o ponteiro do mouse se encontra;
+Agora, sempre que rodar o comando `get_color_code()` nesta sessão do interpretador Python, sua função vai realizar os seguintes passos:
+1. Capturar um screenshot da tela e armazenar na variável `img`;
+2. Armazenar na variável `color` o valor do pixel sobre o qual o ponteiro do mouse se encontra;
 3. Copiar para a área de transferência do computador uma string <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/19996754/9234095">formatada</a> para corresponder ao código de cor hexadecimal daquele pixel;
 
 E você pode conferir o resultado colando o valor em um editor de texto ou no próprio terminal!
