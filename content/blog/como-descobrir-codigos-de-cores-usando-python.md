@@ -92,7 +92,7 @@ Point(x=..., y=...)
 ...
 ```
 
-Já a `pyautogui.screenshot` retorna uma instância da classe `PIL.PngImagePlugin.PngImageFile`, como podemos validar:
+Já a `pyautogui.screenshot` retorna uma instância da classe `PngImageFile`, como podemos validar:
 
 ```python
 >>> img = pyautogui.screenshot()
