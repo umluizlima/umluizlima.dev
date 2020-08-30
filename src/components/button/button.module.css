@@ -1,0 +1,26 @@
+.button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: large;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 0.25em 0.75em;
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+  border: 2px solid;
+  transition-duration: .5s;
+}
+
+.button:disabled {
+  color: #8F8F8F;
+  border-color: #8F8F8F;
+}
