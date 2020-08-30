@@ -4,6 +4,7 @@ import { DefaultSeo } from 'next-seo'
 import Date from '../../components/date'
 import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
+import ShareButton from '../../components/shareButton'
 import utilStyles from '../../styles/utils.module.css'
 import { getAllContentIds, getContentData, getBlogDirectory } from '../../utils/content'
 import SEO from '../../utils/seo'
@@ -22,6 +23,10 @@ const Post = ({ postData, router }) => (
         <Date dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+      <ShareButton
+        title={postData.title}
+        description={postData.description}
+      />
       <hr />
       {postData.disclaimer && <Disclaimer />}
     </article>
