@@ -6,7 +6,7 @@ const Articles = ({ articles, styles }) => (
       <h2 className={styles.headingLg}>Publicações</h2>
       <ul className={styles.list}>
         {articles.map((article) => (
-          <Article article={article} styles={styles} />
+          <Article article={article} styles={styles} key={article.id} />
         ))}
       </ul>
     </section>

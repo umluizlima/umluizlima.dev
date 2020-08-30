@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Date from '../date'
 
 const Article = ({ article, styles }) => (
-  <li className={styles.listItem} key={article.id}>
+  <li className={styles.listItem}>
     <small className={styles.lightText}>
       <Date dateString={article.date} />
     </small>
