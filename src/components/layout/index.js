@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import styles from './layout.module.css'
+import Footer from '../../components/footer'
 import utilStyles from '../../styles/utils.module.css'
 
 const name = 'umluizlima'
@@ -37,13 +38,7 @@ const Layout = ({ children, home }) => (
       )}
     </header>
     <main>{children}</main>
-    {!home && (
-      <div className={styles.backToHome}>
-        <Link href="/">
-          <a>Voltar a página inicial</a>
-        </Link>
-      </div>
-    )}
+    {!home && (<Footer />)}
   </div>
 )
 
