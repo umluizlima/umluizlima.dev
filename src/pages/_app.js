@@ -5,13 +5,11 @@ import '../styles/code.css'
 import '../styles/globals.css'
 import SEO from '../utils/seo'
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Fragment>
-      <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
-    </Fragment>
-  )
-}
+const MyApp = ({ Component, pageProps }) => (
+  <Fragment>
+    <DefaultSeo {...SEO} />
+    <Component {...pageProps} />
+  </Fragment>
+)
 
 export default MyApp
