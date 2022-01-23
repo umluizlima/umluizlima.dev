@@ -6,7 +6,7 @@ import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
 import ShareButton from '../../components/shareButton'
 import utilStyles from '../../styles/utils.module.css'
-import { getAllContentIds, getContentData, getBlogDirectory } from '../../utils/content'
+import { getSortedContentData, getContentData, getBlogDirectory } from '../../utils/content'
 import SEO from '../../utils/seo'
 
 const Post = ({ postData, router }) => (
@@ -34,9 +34,9 @@ const Post = ({ postData, router }) => (
 )
 
 export const getStaticPaths = async () => ({
-  paths: getAllContentIds(getBlogDirectory()).map((id) => (
+  paths: getSortedContentData(getBlogDirectory()).map((post) => (
     {
-      params: { id },
+      params: { id: post.id },
     }
   )),
   fallback: false

@@ -1,4 +1,5 @@
 ---
+published: false
 title: 'Como descobrir códigos de cores usando Python?'
 description: 'Aprenda a encontrar a cor de qualquer pixel na sua tela.'
 date: '2020-08-16'

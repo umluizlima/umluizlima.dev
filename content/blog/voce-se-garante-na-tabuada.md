@@ -1,4 +1,5 @@
 ---
+published: false
 title: 'Você se garante na tabuada?'
 description: 'Desenvolva um jogo para praticar a tabuada usando Python.'
 date: '2020-08-19'

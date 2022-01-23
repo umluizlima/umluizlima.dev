@@ -34,7 +34,7 @@ const getAllContentData = (folder) => {
 }
 
 const getSortedContentData = (folder) => {
-  return getAllContentData(folder).sort((a, b) => (a.date < b.date ? 1 : -1))
+  return getAllContentData(folder).filter((a) => a.published).sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
 module.exports = {
