@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'Início',
+  title: 'Home',
   titleTemplate: '%s | umluizlima',
-  description: 'Veja as publicações de Luiz Lima e se conecte através das redes sociais.',
+  description: "Luiz Lima's personal website",
   canonical: 'https://umluizlima.dev',
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
+    locale: 'en_US',
     url: 'https://umluizlima.dev',
     site_name: 'umluizlima',
     images: [
