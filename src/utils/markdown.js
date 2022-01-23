@@ -15,7 +15,7 @@ const parseMarkdownContent = (content) => {
       return highlight(validLanguage, code).value
     }
   })
-  return marked(content)
+  return marked.parse(content)
 }
 
 module.exports = {

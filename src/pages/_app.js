@@ -15,11 +15,9 @@ const MyApp = ({ Component, pageProps }) => {
   }, [])
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-        window.goatcounter.count({
-          path: url,
-      })
-    }
+    const handleRouteChange = (url) => window.goatcounter.count && window.goatcounter.count({
+        path: url,
+    })
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
