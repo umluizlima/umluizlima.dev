@@ -6,7 +6,7 @@ import Disclaimer from '../../components/disclaimer'
 import Layout from '../../components/layout'
 import ShareButton from '../../components/shareButton'
 import utilStyles from '../../styles/utils.module.css'
-import { getAllContentIds, getContentData, getBlogDirectory } from '../../utils/content'
+import { getSortedContentData, getContentData, getBlogDirectory } from '../../utils/content'
 import SEO from '../../utils/seo'
 
 const Post = ({ postData, router }) => (
@@ -14,7 +14,20 @@ const Post = ({ postData, router }) => (
     <DefaultSeo
       title={postData.title}
       description={postData.description}
-      openGraph={{}}
+      openGraph={{
+        type: 'website',
+        locale: 'en_US',
+        url: `${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`,
+        site_name: 'umluizlima',
+        images: [
+          {
+            url: `https://og-image.now.sh/${postData.title}.png?theme=light&md=0&fontSize=75px`,
+            width: 800,
+            height: 600,
+            alt: `${postData.title} - cover image`,
+          },
+        ],
+      }}
       canonical={`${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`}
     />
     <article>
@@ -34,9 +47,9 @@ const Post = ({ postData, router }) => (
 )
 
 export const getStaticPaths = async () => ({
-  paths: getAllContentIds(getBlogDirectory()).map((id) => (
+  paths: getSortedContentData(getBlogDirectory()).map((post) => (
     {
-      params: { id },
+      params: { id: post.id },
     }
   )),
   fallback: false

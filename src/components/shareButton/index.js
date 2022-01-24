@@ -45,7 +45,7 @@ const ShareButton = ({
       customStyle={styles.shareButton}
       disabled={clicked}
       onClick={handleClick}
-      text={!clicked ? 'Compartilhar' : 'URL copiada!'}
+      text={!clicked ? 'Share' : 'Link copied!'}
     />
   )
 }

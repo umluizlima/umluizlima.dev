@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Link href="/">
-        <a>Voltar a página inicial</a>
+        <a>Back to homepage</a>
       </Link>
       <Button
-        text={'Voltar ao topo'}
+        text={'Back to top'}
         onClick={backToTop}
       />
     </footer>
