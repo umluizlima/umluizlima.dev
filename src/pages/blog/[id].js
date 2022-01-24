@@ -14,7 +14,20 @@ const Post = ({ postData, router }) => (
     <DefaultSeo
       title={postData.title}
       description={postData.description}
-      openGraph={{}}
+      openGraph={{
+        type: 'website',
+        locale: 'en_US',
+        url: `${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`,
+        site_name: 'umluizlima',
+        images: [
+          {
+            url: `https://og-image.now.sh/${postData.title}.png?theme=light&md=0&fontSize=75px`,
+            width: 800,
+            height: 600,
+            alt: `${postData.title} - cover image`,
+          },
+        ],
+      }}
       canonical={`${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`}
     />
     <article>
