@@ -1,7 +1,7 @@
 ---
 published: true
 title: 'How to use different git profiles by folder'
-description: 'Commit with different git username or email depending on the folder you're in!'
+description: "Commit with different git username or email depending on the folder you're in!"
 date: '2022-05-16'
 disclaimer: false
 ---
