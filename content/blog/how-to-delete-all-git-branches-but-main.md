@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: 'How to delete all git branches but main'
 description: 'Clean up your local git environment with one command!'
 date: '2021-01-23'

@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: 'How to setup your Python environment'
 description: 'Work with multiple projects in a safe way!'
 date: '2021-01-26'

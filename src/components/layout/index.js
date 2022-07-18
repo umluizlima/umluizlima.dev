@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import Footer from '../../components/footer'
 import utilStyles from '../../styles/utils.module.css'
 
-const name = 'umluizlima'
+const name = 'victorfulgencio'
 
 const Layout = ({ children, home }) => (
   <div className={styles.container}>
