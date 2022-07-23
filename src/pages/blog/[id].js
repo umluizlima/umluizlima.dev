@@ -18,7 +18,7 @@ const Post = ({ postData, router }) => (
         type: 'website',
         locale: 'en_US',
         url: `${SEO.canonical}${router.asPath.replace(/\?.*/, '')}`,
-        site_name: 'umluizlima',
+        site_name: 'victorfulgencio',
         images: [
           {
             url: `https://og-image.now.sh/${postData.title}.png?theme=light&md=0&fontSize=75px`,

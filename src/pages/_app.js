@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
     <Fragment>
       <DefaultSeo {...SEO} />
       <Head>
-        <script data-goatcounter="https://umluizlima.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <script data-goatcounter="https://victorfulgencio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
       </Head>
       <Component {...pageProps} />
     </Fragment>

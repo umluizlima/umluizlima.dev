@@ -1,25 +1,25 @@
 module.exports = {
   title: 'Home',
-  titleTemplate: '%s | umluizlima',
+  titleTemplate: '%s | victorfulgencio',
   description: "Luiz Lima's personal website",
-  canonical: 'https://umluizlima.dev',
+  canonical: 'https://victorfulgencio.dev',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://umluizlima.dev',
-    site_name: 'umluizlima',
+    url: 'https://victorfulgencio.dev',
+    site_name: 'victorfulgencio',
     images: [
       {
-        url: 'https://og-image.now.sh/umluizlima.png?theme=light&md=0&fontSize=75px',
+        url: 'https://og-image.now.sh/victorfulgencio.png?theme=light&md=0&fontSize=75px',
         width: 800,
         height: 600,
-        alt: 'umluizlima website cover',
+        alt: 'victorfulgencio website cover',
       },
     ],
   },
   twitter: {
-    handle: '@umluizlima',
-    site: '@umluizlima',
+    handle: '@victorfulgencio',
+    site: '@victorfulgencio',
     cardType: 'summary_large_image',
   },
 };
