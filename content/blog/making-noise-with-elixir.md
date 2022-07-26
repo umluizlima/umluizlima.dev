@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Making some noise sounds with elixir'
+title: 'Making some noise with elixir'
 description: "How to install synthex lib and make some sound using elixir"
 date: '2022-07-26'
 disclaimer: false
